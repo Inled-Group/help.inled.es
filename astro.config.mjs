@@ -6,18 +6,30 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'Documentación Inled Group',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
 			sidebar: [
 				{
-					label: 'Guides',
+					label: 'Documentación',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
+						{ label: 'Bienvenido', slug: 'docs/lista' },
 					],
 				},
+
 				{
-					label: 'Reference',
+					label: 'InSuite',
+					items: [
+						// Each item here is one entry in the navigation menu.
+						{ label: 'Inicio', slug: 'docs/insuite/insuite' },
+						{ label: 'InMD', slug: 'docs/insuite/inmd' },
+						{ label: 'InQR', slug: 'docs/insuite/inqr' },
+						{ label: 'InDOC', slug: 'docs/insuite/indoc' },
+					],
+				},
+
+				{
+					label: 'Preguntas y respuestas',
 					autogenerate: { directory: 'reference' },
 				},
 			],
